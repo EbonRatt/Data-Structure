@@ -1,0 +1,26 @@
+int[] arrNum = {50,30,-10,20,5};
+
+        int j;
+        for(int i = 0 ; i < arrNum.length; i++){
+            j = i + 1;
+            int last = arrNum[i];
+            while( j < arrNum.length){
+                if( last > arrNum[j]){
+                    last = arrNum[j];
+                    Swap(arrNum,i,j);
+                }
+                j++;
+            }
+        }
+
+        // Display Sorted Array
+        for(int x : arrNum){
+            System.out.println(x);
+        }
+
+// Func Swap 2 Number
+    public static void Swap(int[] arr, int a,int b){
+        int temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
+    }
